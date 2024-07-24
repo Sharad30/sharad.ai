@@ -1,0 +1,17 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "sharad.ai"
+  navbar:
+    right:
+      - about.qmd
+      - icon: github
+        href: https://github.com/sharad30
+      - icon: twitter
+        href: https://twitter.com/sharadshriyan
+format:
+  html:
+    theme: cosmo
+    css: styles.css
