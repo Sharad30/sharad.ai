@@ -1,6 +1,9 @@
 [
   {
     "listing": "/index.html",
-    "items": []
+    "items": [
+      "/posts/2024-07-24-the-synthetic-data-story/index.html",
+      "/posts/2024-07-24-the-data-monitoring-system/index.html"
+    ]
   }
 ]

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>sharad.ai</title>
+<title>Monitor your data using Dockerized PostgreSQL, Airflow &amp; Apache Superset – sharad.ai</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +23,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,77 +66,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">sharad.ai</span>
     </a>
   </div>
@@ -149,7 +89,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About Me</span></a>
   </li>  
   <li class="nav-item compact">
@@ -172,13 +112,13 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">sharad.ai</h1>
+    <div class="quarto-title column-body">
+      <h1 class="title">Monitor your data using Dockerized PostgreSQL, Airflow &amp; Apache Superset</h1>
                       </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
       
     
@@ -186,74 +126,203 @@ window.Quarto = {
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<blockquote class="blockquote">
+<p>The Data You Know; The Story You Don’t</p>
+</blockquote>
+<ul>
+<li>toc: true</li>
+<li>badges: true</li>
+<li>comments: true</li>
+<li>categories: [jupyter]</li>
+<li>image: images/chart-preview.png</li>
+</ul>
+<section id="tldr" class="level2">
+<h2 class="anchored" data-anchor-id="tldr">TL;DR</h2>
+<p>In this blogpost I talk about a data monitoring system that I built to monitor the quality and availibility of data in real time. The system uses <code>Airflow</code> to schedule jobs, <code>PostgreSQL</code> to store data and <code>Superset</code> to visualize the data and monitor its quality.</p>
+<p>Through this system I monitor the data availability, quality, consistency, and drift. This system enables me to take actions like - identifying discrepancies in the ETL pipeline, if expected data is missing, anomaly in the data that is causing the business objective to fail, and many more.</p>
+</section>
+<section id="outline" class="level2">
+<h2 class="anchored" data-anchor-id="outline">Outline</h2>
+<p>I am assuming that you have Docker installed in your system. If not installed, follow the instructions at <url>.</url></p>
+<p>We will:</p>
+<ol type="1">
+<li><p>Install Airflow, PostgreSQL and Superset with Docker.</p></li>
+<li><p>Fetch data, preprocess and push to PostgreSQL using Airflow.</p></li>
+<li><p>Build dashboards in Superset to monitor and visualize the data.</p></li>
+</ol>
+</section>
+<section id="high-level-architecture-in-a-diagram" class="level2">
+<h2 class="anchored" data-anchor-id="high-level-architecture-in-a-diagram">High level architecture in a diagram</h2>
+<p><img src="monitoring-system.png" class="img-fluid"></p>
+</section>
+<section id="setting-up-postgresql-airflow-and-superset" class="level2">
+<h2 class="anchored" data-anchor-id="setting-up-postgresql-airflow-and-superset">Setting up PostgreSQL, Airflow and Superset</h2>
+<section id="to-setup-airflow-using-docker" class="level3">
+<h3 class="anchored" data-anchor-id="to-setup-airflow-using-docker">To setup Airflow using Docker:</h3>
+<section id="download-airflow-docker-compose" class="level4">
+<h4 class="anchored" data-anchor-id="download-airflow-docker-compose">Download Airflow docker-compose</h4>
+<pre><code>curl -LfO 'https://airflow.apache.org/docs/apache-airflow/2.4.1/docker-compose.yaml'</code></pre>
+</section>
+<section id="create-mount-directories-for-docker" class="level4">
+<h4 class="anchored" data-anchor-id="create-mount-directories-for-docker">Create mount directories for Docker</h4>
+<pre><code>mkdir -p ./dags ./logs ./plugins</code></pre>
+</section>
+<section id="save-airflow_uid-in-.env" class="level4">
+<h4 class="anchored" data-anchor-id="save-airflow_uid-in-.env">Save AIRFLOW_UID in .env</h4>
+<pre><code>echo -e "AIRFLOW_UID=$(id -u)" &gt; .env</code></pre>
+</section>
+<section id="initialize-the-database" class="level4">
+<h4 class="anchored" data-anchor-id="initialize-the-database">Initialize the database</h4>
+<pre><code>docker-compose up airflow-init</code></pre>
+</section>
+<section id="start-all-airflow-services" class="level4">
+<h4 class="anchored" data-anchor-id="start-all-airflow-services">Start all airflow services</h4>
+<pre><code>docker-compose up</code></pre>
+</section>
+</section>
+<section id="to-setup-postgresql-using-docker" class="level3">
+<h3 class="anchored" data-anchor-id="to-setup-postgresql-using-docker">To setup PostgreSQL using Docker:</h3>
+<section id="pull-postgres-docker-images" class="level4">
+<h4 class="anchored" data-anchor-id="pull-postgres-docker-images">Pull postgres Docker images</h4>
+<pre><code>docker pull postgres</code></pre>
+</section>
+<section id="run-postgres-container" class="level4">
+<h4 class="anchored" data-anchor-id="run-postgres-container">Run postgres container</h4>
+<pre><code>docker run --name postgresql -e POSTGRES_USER=&lt;username&gt; -e POSTGRES_PASSWORD=&lt;password&gt; -p 5432:5432 -v /data:/var/lib/postgresql/data -d postgres</code></pre>
+<ul>
+<li>postgresql is the name of the Docker Container. -e POSTGRES_USER is the parameter that sets a unique username to the Postgres database. -e POSTGRES_PASSWORD is the parameter that allows you to set the password of the Postgres database. -p 5432:5432 is the parameter that establishes a connection between the Host Port and Docker Container Port. In this case, both ports are given as 5432, which indicates requests sent to the Host Ports will automatically redirect to the Docker Container Port. In addition, 5432 is also the same port where PostgreSQL will be accepting requests from the client. -v is the parameter that synchronizes the Postgres data with the local folder. This ensures that Postgres data will be safely present within the Home Directory even if the Docker Container is terminated. -d is the parameter that runs the Docker Container in the detached mode, i.e., in the background. If you accidentally close or terminate the Command Prompt, the Docker Container will still run in the background. postgres is the name of the Docker image that was previously downloaded to run the Docker Container.</li>
+</ul>
+</section>
+</section>
+<section id="to-setup-superset-using-docker" class="level3">
+<h3 class="anchored" data-anchor-id="to-setup-superset-using-docker">To setup Superset using Docker:</h3>
+<section id="clone-the-repository" class="level4">
+<h4 class="anchored" data-anchor-id="clone-the-repository">Clone the repository</h4>
+<pre><code>git clone https://github.com/apache/superset.git
+cd superset</code></pre>
+</section>
+<section id="run-superset" class="level4">
+<h4 class="anchored" data-anchor-id="run-superset">Run superset</h4>
+<pre><code>docker-compose -f docker-compose-non-dev.yml pull
+docker-compose -f docker-compose-non-dev.yml up</code></pre>
+</section>
+</section>
+<section id="to-setup-using-setup.sh" class="level3">
+<h3 class="anchored" data-anchor-id="to-setup-using-setup.sh">To setup using setup.sh:</h3>
+<p>Clone the repo (https://github.com/Sharad30/data-monitoring-system) and run:</p>
+<pre><code>./setup.sh</code></pre>
+</section>
+</section>
+<section id="how-do-you-schedule-a-task-using-airflow" class="level2">
+<h2 class="anchored" data-anchor-id="how-do-you-schedule-a-task-using-airflow">How do you schedule a task using <code>Airflow</code>?</h2>
+<p>Apache Airflow is an open-source platform for developing, scheduling, and monitoring batch-oriented workflows.</p>
+<ol type="1">
+<li>Create a python module inside <code>dags</code> folder.</li>
+<li>Define a function that is executed as a task.</li>
+<li>Define a <code>DAG</code> to schedule tasks.</li>
+<li>Define a task using the function defined in step 2.</li>
+<li>Setup task dependencies.</li>
+</ol>
+<p>The below steps ensure that you have an up and running job scheduled at regular intervals:</p>
+<ol type="1">
+<li>Define a function to fetch data from the API or from S3 or any other source</li>
+</ol>
+<pre><code>def download_api_data():
+    print(f"Fetching data....")
+    response = requests.get(&lt;API url&gt;)
+    data = response.json()
+    print(f"Total number of data: {len(data)}")
+    json_object = json.dumps(data, indent=2)
+    with open(f"/tmp/pdl_{currency}_hourly.json", "w") as f:
+        f.write(json_object)
+    print(f"Finished downloading data.....")</code></pre>
+<p>The above function fetches data from the API and then stores it as json file for further processing.</p>
+<ol start="2" type="1">
+<li>Define a function to move downloaded data(json, csv etc.) to PostgreSQL</li>
+</ol>
+<pre><code>def move_pdl_data_to_postgres(**kwargs):
+    currency = kwargs["currency"]
+    print(f"Populating for {currency} has started")
+    with open(f"/tmp/pdl_{currency}_hourly.json") as f:
+        data = json.load(f)
+    df = pd.DataFrame(data)
+
+    # Define your preprocessing steps here like typecasting a column according to the Postgresql schema and any other steps specific to your use case
+
+    print("All values created, starting the push to db")
+    df.to_sql(name="&lt;name-of-sql-table&gt;", con=engine, index=False, if_exists="append", chunksize=300)</code></pre>
+<p>In the above function we load the json data downloaded in step 1 inside a dataframe and then move it to PostgreSQL table, defined in our <code>con</code> parameter of <code>to_sql</code> function.</p>
+<ol start="3" type="1">
+<li>Define a <code>DAG</code></li>
+</ol>
+<ul>
+<li>DAG object is needed to define how we are going to schedule our various tasks.</li>
+<li>Here we pass a string that defines the dag_id, which serves as a unique identifier for your DAG and also description.</li>
+<li>We also schedule a DAG using <code>schedule_interval</code> parameter to run it at hourly frequency and also provide start_date of the DAG.</li>
+<li>Below is an example of the DAG definition:</li>
+</ul>
+<pre><code>dag = DAG(
+    dag_id="data-migration",
+    description="Daily data monitoring pipeline",
+    schedule_interval="0 * * * *",
+    start_date=datetime(2022, 10, 17),
+)</code></pre>
+<ol start="4" type="1">
+<li>Define <code>PythonOperator</code></li>
+</ol>
+<ul>
+<li>Operators are tasks that define a unit of work to be done.</li>
+<li>There are manny different kind of operators that you can play around with in Airflow. But we will stick to <code>PythonOperator</code>, which takes python function as a parameter.</li>
+<li>Here we define the <code>task_id</code>, <code>python_callable</code> and above defined <code>dag</code> object.</li>
+<li>Below is how we define the <code>PythonOperator</code> object</li>
+</ul>
+<pre><code>PythonOperator(
+            task_id=f"download_json",
+            python_callable=download_json,
+            dag=dag,
+        )</code></pre>
+<ol start="5" type="1">
+<li>Setup task dependencies</li>
+</ol>
+<p>Lets say we have 2 PythonOperator defined as 2 tasks and one task is dependent on the other. In our case we first fetch the data from API and then push the data to PostgreSQL. So setting up task dependency kind of becomes and it is defined by using <code>&gt;&gt;</code> operator as follows:</p>
+<pre><code>task1 &gt;&gt; task2</code></pre>
+<p>Here the Airflow DAG knows that it has to first finish running the <code>task1</code> and then move on to <code>task2</code>. Any failure in task1 will result in termination of the job.</p>
+</section>
+<section id="what-is-the-airflow-ui-going-to-look-like" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-the-airflow-ui-going-to-look-like">What is the Airflow UI going to look like?</h2>
+<p><img src="airflow-graph.png" class="img-fluid"></p>
+<p>The above UI can be accessed after Airflow login and navigating as follows: <code>&lt;DAG-name&gt; &gt; Graph</code>.</p>
+<p>The Graph shows you the various tasks that are scheduled to run and each row defines multiple tasks and how each one is dependent on the other i.e Task <code>move_pdl_data_to_postgres_ADA</code> is dependent on <code>download_pdl_json_ADA</code> and hence has to be completed first.</p>
+<p>The subsequent rows follow a similar pattern and here we have demonstrated multiple different jobs scheduled inside a single DAG, where each job does the same thing as other, but for different type of data i.e for different bitcoin currencies in our scenario.</p>
+</section>
+<section id="how-to-visualize-the-raw-data-in-apache-superset" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-visualize-the-raw-data-in-apache-superset">How to visualize the raw data in <code>Apache Superset</code>?</h2>
+<p><img src="superset-dashboard.png" class="img-fluid"></p>
+<ul>
+<li>Superset is a data exploration and visualization platform and we are going to leverage it to use it as our frontend for monitoring the data we move to the PostgreSQL at regular intervals.</li>
+<li>As seen in the above example dashboard we are doing some sanity check and checking the trend for a bitcoin currency.</li>
+<li>So playing around with visualizations specific to your data and problem statement is straight forward in Superset and it comes with a bunch of features.</li>
+</ul>
+</section>
+<section id="what-next" class="level2">
+<h2 class="anchored" data-anchor-id="what-next">What next?</h2>
+<p>This task can be further expanded in various aspects each from PostgreSQl, Airflow and Superset perspective, by adding more sources of information that we want to monitor in real time and keep adding more tables to our PostgreSQL database, schedule more DAGs in our Airflow container and add more dashboards monitoring the nature of different data.</p>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1721845104672" data-listing-reading-time-sort="8" data-listing-word-count-sort="1487">
-<div class="thumbnail">
-<p><a href="./posts/2024-07-24-the-synthetic-data-story/index.html" class="no-external"></a></p><a href="./posts/2024-07-24-the-synthetic-data-story/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/2024-07-24-the-synthetic-data-story/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2024-07-24-the-synthetic-data-story/index.html" class="no-external">The Synthetic Data Story</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/2024-07-24-the-synthetic-data-story/index.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/2024-07-24-the-synthetic-data-story/index.html" class="no-external">The Data You Know; The Story You Don’t</a>
-</div>
-</div>
-<div class="metadata">
-<p><a href="./posts/2024-07-24-the-synthetic-data-story/index.html" class="no-external"></a></p><a href="./posts/2024-07-24-the-synthetic-data-story/index.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-listing-file-modified-sort="1721845104676" data-listing-reading-time-sort="7" data-listing-word-count-sort="1265">
-<div class="thumbnail">
-<p><a href="./posts/2024-07-24-the-data-monitoring-system/index.html" class="no-external"></a></p><a href="./posts/2024-07-24-the-data-monitoring-system/index.html" class="no-external">
-<p class="card-img-top"><img src="posts/2024-07-24-the-data-monitoring-system/monitoring-system.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/2024-07-24-the-data-monitoring-system/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2024-07-24-the-data-monitoring-system/index.html" class="no-external">Monitor your data using Dockerized PostgreSQL, Airflow &amp; Apache Superset</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/2024-07-24-the-data-monitoring-system/index.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/2024-07-24-the-data-monitoring-system/index.html" class="no-external">The Data You Know; The Story You Don’t</a>
-</div>
-</div>
-<div class="metadata">
-<p><a href="./posts/2024-07-24-the-data-monitoring-system/index.html" class="no-external"></a></p><a href="./posts/2024-07-24-the-data-monitoring-system/index.html" class="no-external">
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
